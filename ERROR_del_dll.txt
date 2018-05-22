@@ -1,0 +1,3 @@
+El Error del Programa del archivo .dll es que el constructor Person esta compuesto por Adress(Constructor) y a su vez Adress esta compuesto
+por Person, lo que hace que el programa sea inviable dado que no puede haber este tipo de correlacion si no estan bien definidos ambos 
+constructores. En definitiva se estan tratando a ambas clases como que fueran clases padres y clases hijos entre ellas a la vez.
