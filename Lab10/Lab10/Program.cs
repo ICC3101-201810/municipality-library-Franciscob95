@@ -97,26 +97,34 @@ namespace Lab10
                 }
                 else if (resp == "3")
                 {
-                    Console.WriteLine("Ingrese el nombre del cliente");
-                    string nom = Console.ReadLine();
-                    Console.WriteLine("Ingrese el apellido");
-                    string ap = Console.ReadLine();
-                    Console.WriteLine("Ingrese la fecha de nacimiento");
-                    DateTime fNac = DateTime.Parse(Console.ReadLine());
-                    Console.WriteLine("Ingrese la direccion");
-                    ClassLibrary1.Address direc = //ERROR DE CODIGO
-                    Console.WriteLine("Ingrese el numero de RUT");
-                    string RUT = Console.ReadLine();
-                    Console.WriteLine("Ingrese el nombre de su Padre");
-                    string nomP1 = Console.ReadLine();
+                    Console.WriteLine("Ingrese marca");
+                    string bran = Console.ReadLine();
+                    Console.WriteLine("Ingrese el modelo");
+                    string mod = Console.ReadLine();
+                    Console.WriteLine("Ingrese el anio");
+                    int anio = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Ingrese el numero de patente");
+                    string patente = Console.ReadLine();
+                    Console.WriteLine("Ingrese el nombre de su duenio");
+                    string duen = Console.ReadLine();
                     ClassLibrary1.Person parent1 = new Person(nomP1, ap, 10 / 10 / 10, ERROR, "1111", null, null);
-                    Console.WriteLine("Ingrese el nombre de su madre");
-                    string nomP2 = Console.ReadLine();
-                    ClassLibrary1.Person parent2 = new Person(nomP2, ap, 10 / 10 / 10, ERROR, "1111", null, null);
+                    Console.WriteLine("Ingrese el numero de cinturones");
+                    int cint = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Es diesel?? / n 1 = si / n 2 = no");
+                    string resp3 = Console.ReadLine();
 
-                    p = new ClassLibrary1.Person(nom, ap, fNac, ERROR, RUT, parent1, parent2);
+                    if (resp3 == "1")
+                    {
+                        bool die = true;
+                    }
+                    else if (resp == "2")
+                    {
+                        bool die = false;
+                    }
 
-                    per.Add(p);
+                    c = new ClassLibrary1.Car(bran, mod, anio, duen, patente, cint, die);
+
+                    car.Add(c);
                 }
             }
         }
